@@ -20,4 +20,5 @@ module.exports =  async function (req, res) {
       }
     } // if message.text
   }
+  res.end()
 }
