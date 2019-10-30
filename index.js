@@ -1,7 +1,8 @@
 const TelegramBot = require('node-telegram-bot-api')
 
 var token = '861772445:AAE-yaLFzjquQQJiWfZCBHRRf1_sFuR643M'
-var bot   = new TelegramBot(token)
+var options = { request: { headers:{  }}}
+var bot   = new TelegramBot(token, options)
 
 module.exports =  async function (req, res) {
   var msg    = req.body.message
@@ -20,5 +21,6 @@ module.exports =  async function (req, res) {
       }
     } // if message.text
   }
+  return {ok: true}
   //res.end()
 }
