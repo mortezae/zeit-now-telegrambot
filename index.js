@@ -12,13 +12,13 @@ module.exports =  async function (req, res) {
 
     if (msg.text != null) {
       if (msg.text.match(/\/start/)) {
-        bot.sendMessage(chatId, 'Welcome!')
+        await bot.sendMessage(chatId, 'Welcome!')
       } else if (msg.text.includes('hi')) {
-        bot.sendMessage(chatId, 'Hello! :)')
+        await bot.sendMessage(chatId, 'Hello! :)')
       } else if (msg.text.includes('bye')) {
-        bot.sendMessage(chatId, 'Bye dear!')
+        await bot.sendMessage(chatId, 'Bye dear!')
       }
     } // if message.text
   }
-  res.end()
+  //res.end()
 }
