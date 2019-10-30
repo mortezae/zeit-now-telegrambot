@@ -1,6 +1,4 @@
 module.exports = async (req, res) => {
-  //const body = req.body //{ body } = req
-  //res.end(`Hello ${body.name}, you just parsed the request body!`)
-  res.end(`Hello`)
-
+  const query = req.query //{ query } = req
+  res.end(`Hello ${query.name}, you just parsed the request body!`)
 }
