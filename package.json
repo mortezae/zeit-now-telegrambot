@@ -1,0 +1,22 @@
+{
+  "name": "zeit-now-telegrambot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortezae/zeit-now-telegrambot.git"
+  },
+  "author": "mortezae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mortezae/zeit-now-telegrambot/issues"
+  },
+  "homepage": "https://github.com/mortezae/zeit-now-telegrambot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.40.0"
+  }
+}
