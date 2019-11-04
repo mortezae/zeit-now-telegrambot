@@ -1,11 +1,9 @@
 const TelegramBot = require('node-telegram-bot-api')
 
 var token = '861772445:AAE-yaLFzjquQQJiWfZCBHRRf1_sFuR643M'
-//var options = { request: { headers:{ '' }}}
 var bot   = new TelegramBot(token)
 
 module.exports = async function (req, res) {
-  //res.status(200)
   var msg    = req.body.message
   var cbq    = req.body.callback_query
 
@@ -21,6 +19,7 @@ module.exports = async function (req, res) {
         await bot.sendMessage(chatId, 'Bye dear!')
       }
     } // if message.text
-  }
+  } // if msg
+
   res.end()
 }
