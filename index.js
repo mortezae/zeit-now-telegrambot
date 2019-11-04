@@ -1,10 +1,10 @@
 const TelegramBot = require('node-telegram-bot-api')
 
-var token = '861772445:AAE-yaLFzjquQQJiWfZCBHRRf1_sFuR643M'
+var token = '133701337:AAAE-lEEtzjquQQJiWfZCBHRRf1_sFuR643M'
 //var options = { request: { headers:{ '' }}}
 var bot   = new TelegramBot(token)
 
-module.exports = function (req, res) {
+module.exports = async (req, res) => {
   res.status(200)
   var msg    = req.body.message
   var cbq    = req.body.callback_query
@@ -14,14 +14,16 @@ module.exports = function (req, res) {
 
     if (msg.text != null) {
       if (msg.text.match(/\/start/)) {
-        bot.sendMessage(chatId, 'Welcome!')
+        await bot.sendMessage(chatId, 'Welcome!');
+        await bot.sendMessage(chatId, 'Welcome again!');
+        await bot.sendMessage(chatId, 'Welcome again x 2!')
       } else if (msg.text.includes('hi')) {
-        bot.sendMessage(chatId, 'Hello! :)')
+        await bot.sendMessage(chatId, 'Hello! :)')
       } else if (msg.text.includes('bye')) {
-        bot.sendMessage(chatId, 'Bye dear!')
+        await bot.sendMessage(chatId, 'Bye dear!')
       }
     } // if message.text
   }
-  //return '{ok: true}'
-  //res.end()
+  // return '{ok: true}'
+  res.end();
 }
