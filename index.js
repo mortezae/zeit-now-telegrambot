@@ -23,5 +23,5 @@ module.exports = async function (req, res) {
     } // if message.text
   }
   //return '{ok: true}'
-  res.end()
+  //res.end()
 }
