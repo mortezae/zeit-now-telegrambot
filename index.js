@@ -12,10 +12,8 @@ module.exports = async function (req, res) {
 
     if (msg.text != null) {
       if (msg.text.match(/\/start/)) {
-        await bot.sendMessage(chatId, 'به بازی حدس کلمه خوش امدید')
+        await bot.sendMessage(chatId, '')
       } 
-if(msg.text !=null){ if(msg.text.match(/\/شروع بازی یک نفره/)){
-await bot.sendMessage(chatId,'حدس بزن چی نوشتم<br> _ _ _ _'
 
 else if (msg.text.includes('سلام')) {
         await bot.sendMessage(chatId, 'Hello! :)')
